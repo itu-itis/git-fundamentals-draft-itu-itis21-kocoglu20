@@ -5,12 +5,16 @@
 <title> My Web Page</title>
 <link rel = "stylesheet" type = "text/css" href = "15_11_2021.css" />
 </head>
-<body>
+<body onload="document.body.style.backgroundColor = 'pink' "
+onresize="document.body.style.backgroundColor = 'lightblue' "
+
+onkeydown="document.body.style.backgroundColor = 'white' "
+onkeyup="document.body.style.backgroundColor = 'lightyellow' ">
 <p>
 <strong> Introduction to Information Systems </strong>
 </p>
 <p>
-<p class = "centered">
+<p class = "centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
 <em>
 Erol Koçoğlu
 <br>
@@ -20,24 +24,28 @@ Erol Koçoğlu
 <p>
 Evolution of homo species
 </p>
-<ul>
+<ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
 <li> Homo habilis ( able man)</li>
 <li>Homo erectus (upright man)</li>
 <li>Homo floresiensis (hobbit)</li>
 <li>Homo sapiens (wise man)
-<ul>
+<ul id="innerList" 
+onclick="document.getElementById('innerList').style.backgroundColor='orange'">
 <li> Homo sapiens sapiens</li>
 </ul></li>
 
 </ul>
 
-<h1>Human Evolution</h1>
+<h1 onmouseover="style.color='orange';
+style.backgroundColor='lightgreen'"
+onmouseout="style.color='red';
+style.backgroundColor='white' ">Human Evolution</h1>
 <img src="evolution-diagram.png" />
 <br>
 You can find the source of the image by clicking the link <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> Biology Online</a>
 <br>
 <h2>The clickable image</h2>
-<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"><img src="evolution-diagram.png" /></a>
+<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"><img id="MyImg" alt="Evolution Diagram" onclick="alert(document.getElementById('MyImg').alt) src="evolution-diagram.png" /></a>
 <br>
 The image is a link, try it.
 <br>
